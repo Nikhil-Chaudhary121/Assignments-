@@ -58,9 +58,8 @@ const users = [
     
     
     // 3. Get an array containing only the names.
-    const nameArr = []
-    users.forEach((user) =>{
-        nameArr.push(user.name)
+    const nameArr = users.map((user) =>{
+        return user.name
     })
     
     console.log("03 An Arry with all users name :" , nameArr);
@@ -68,7 +67,7 @@ const users = [
     // 4. Find the user with `id === 3`.
     const findUser = (id) => {
         return users.find((user)=>{
-            return user
+            return user.id == id
         })
     }
     
@@ -105,13 +104,11 @@ const users = [
     
     // 7. Get the total age of all users.
     
+     const totAge = users.reduce((accumulator, currentItem  ) => {
+        return  accumulator + currentItem.age
+    }, 0)
     
-    let totalAge = 0;
-    users.map((user) => {
-        totalAge = totalAge + user.age
-    })
-    
-    console.log('07 Total age of users : ' , totalAge)
+    console.log('07 Total age of users : ' , totAge)
     
     
     // 8. Create a new array where each user has:
@@ -125,14 +122,17 @@ const users = [
         
         // `canVote` should be `true` if age >= 18.
 
-    users.forEach((user)=> {
+    const canVoteUser = users.map((user)=> {
+        let canVote = false
         if(user.age >= 18){
-            user.canVote = true
-        }else{
-            user.canVote = false
+            canVote = true
+        }
+        return{
+            ...user , 
+            canVote
         }
         
     })
 
-    console.log(users);
+    console.log(canVoteUser);
     
