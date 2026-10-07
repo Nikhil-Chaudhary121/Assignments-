@@ -44,10 +44,8 @@ const updateQuantity = (cart, productId, quantity) => {
         return {...singleCart}
         
     });
-    newCart.map((singleCart) => {
-        return {...singleCart }
-    })
-    console.log(newCart);
+
+    return newCart
     
 }
 
