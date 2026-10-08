@@ -8,6 +8,13 @@ const users = [
   { id: 4, name: "Rohit", age: 19, isActive: true },
   { id: 5, name: "Vikas", age: 16, isActive: false }
 ];
+// const users = [
+//   { id: 1, name: "Nikhil", age: 22, isActive: true },
+//   { id: 2, name: "Rahul", age: 17, isActive: false },
+//   { id: 3, name: "Aman", age: 25, isActive: true },
+//   { id: 4, name: "Rohit", age: 19, isActive: true },
+//   { id: 5, name: "Vikas", age: 16, isActive: false }
+// ];
 
 // ```js
 async function getUser  (id) {
