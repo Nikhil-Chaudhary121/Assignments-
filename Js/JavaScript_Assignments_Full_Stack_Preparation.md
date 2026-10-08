@@ -122,6 +122,7 @@ const cart = [
   { id: 1, name: "Keyboard", price: 2000, quantity: 2 },
   { id: 2, name: "Mouse", price: 800, quantity: 1 },
   { id: 3, name: "Monitor", price: 12000, quantity: 2 }
+
 ];
 ```
 

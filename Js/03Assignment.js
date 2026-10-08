@@ -2,7 +2,9 @@
 const cart = [
   { id: 1, name: "Keyboard", price: 2000, quantity: 2 },
   { id: 2, name: "Mouse", price: 800, quantity: 1 },
-  { id: 3, name: "Monitor", price: 12000, quantity: 2 }
+  { id: 3, name: "Monitor", price: 12000, quantity: 2 },
+    { id: 3, name: "Monitor", price: 12000, quantity: 2 },
+  { id: 4, name: "Ps5", price: 49000, quantity: 0 }
 ];
 
 // Create functions:
@@ -49,6 +51,11 @@ const updateQuantity = (cart, productId, quantity) => {
     
 }
 
+
+const quantityCheck = () =>{
+    const newCart = {}
+}
+
 getCartTotal(cart)
 getTotalItems(cart)
 findProduct(cart, 3)
@@ -65,3 +72,20 @@ console.log(cart)
 // 5
 
 // Important: don't modify the original cart when updating/removing items. Return a new array.
+// ### Extra challenges
+
+// - Reject quantity <= 0.
+// - Handle a product that doesn't exist.
+// - Add `addProduct(cart, product)`.
+// - Prevent duplicate product IDs.
+
+// ### Concepts being tested
+
+// - Functions
+// - Array methods
+// - Objects
+// - Immutability
+// - Spread syntax
+// - Validation
+
+// ---
